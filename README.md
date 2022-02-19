@@ -38,7 +38,7 @@ Abrir a interface gráfica do Cypress
  
  - npm run test
 
- Dica: Deletar as pastas padrão dentro do cypress -> integration e criar o arquivo de teste. Exemplo: home.spec.js
+ Dica: Deletar as pastas padrão dentro do cypress -> Criar a pasta integration e criar o arquivo de teste. Exemplo: home.spec.js
 
 
 
