@@ -13,7 +13,17 @@ describe('Cadastro', ()=>{
             nome: 'Luzia Amorim',
             cpf: '71162253300',
             email: 'luzia@gmail.com',
-            whatsapp: '92987654321'
+            whatsapp: '92987654321',
+            endereco: {
+                cep: '69036100',
+                rua: 'Rua Teófilo Dias',
+                numero: '3',
+                complemento:'Av Principal',
+                bairro:'Compensa',
+                cidade_uf: 'Manaus/AM'
+            },
+            metodo_entrega: 'Moto',
+            cnh: 'IMG-20220202-WA0002.jpg'
         }
 
         cy.get('input[name="name"]').type(entregador.nome)
@@ -21,8 +31,18 @@ describe('Cadastro', ()=>{
         cy.get('input[name="email"]').type(entregador.email)
         cy.get('input[name="whatsapp"]').type(entregador.whatsapp)
 
+        cy.get('input[name="postalcode"]').type(entregador.endereco.cep)
+        cy.get('input[type=button][value="Buscar CEP"]').click()
+        cy.get('input[name="address-number"]').type(entregador.endereco.numero)
+        cy.get('input[name="address-details"]').type(entregador.endereco.complemento)
 
+        cy.get('input[name="address"]').should('have.value', entregador.endereco.rua)
+        cy.get('input[name="district"]').should('have.value', entregador.endereco.bairro)
+        cy.get('input[name="city-uf"]').should('have.value', entregador.endereco.cidade_uf)
 
+        cy.contains('.delivery-method li', entregador.metodo_entrega).click()
+
+        cy.get('input[accept^="image"]').attachFile('/images/' + entregador.cnh)
 
     })
 })
