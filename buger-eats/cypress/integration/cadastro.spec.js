@@ -2,6 +2,28 @@
 import SingupPage from '../pages/SignupPage'
 
 describe('Cadastro', () => {
+
+    // before(function(){
+    //     //EXECUTA
+    //     cy.log('Antes de TODOS os casos de testes')
+    // })
+
+    // beforeEach(function(){
+    //     //EXECUTA
+    //     cy.log('Antes de CADA os casos de testes')
+    // })
+
+    // after(function(){
+    //     //EXECUTA
+    //     cy.log('Depois de TODOS os casos de testes')
+    // })
+
+    // afterEach(function(){
+    //     //EXECUTA
+    //     cy.log('Depois de CADA os casos de testes')
+    // })
+
+
     it('Usuario deve se tornar um empregador', () => {
 
         let delivery = {

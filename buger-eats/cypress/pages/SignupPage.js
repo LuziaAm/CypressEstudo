@@ -2,8 +2,8 @@
 class SingupPage{
 
     go(){
-        cy.viewport(1440, 900) //viewport redimenciona a tamanho da janela
-        cy.visit('https://buger-eats.vercel.app/') // visit acessa a página principal alvo do teste
+        //viewport redimenciona a tamanho da janela esta em cypress.json
+        cy.visit('/') // visit acessa a página principal alvo do teste | Url está em cypress.json
 
 
         cy.get('a[href="/deliver"]').click() // click com localizador do botão
