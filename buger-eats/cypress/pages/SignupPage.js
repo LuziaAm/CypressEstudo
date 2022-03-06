@@ -42,7 +42,7 @@ class SingupPage{
     }
 
     alertMessageShouldBe(expectedMessage){
-        cy.get('.field-group div span').should('have.text', expectedMessage)
+        cy.get('.alert-error').should('have.text', expectedMessage)
     }
 }
 

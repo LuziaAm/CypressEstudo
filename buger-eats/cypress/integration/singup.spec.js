@@ -22,12 +22,18 @@ describe('singup', () => {
 
     })
 
-    it('Incorrect document', function(){        
+    it('Incorrect document', function(){
+        //Precisa estar na ordem por ser procedural        
         signup.go()
         signup.fillForm(this.delivery.cpf_inv)
         signup.submit()
-        //Precisa estar na ordem por ser procedural
-        const expectedMessage = 'Oops! CPF inválido'
-        signup.alertMessageShouldBe(expectedMessage)
+        signup.alertMessageShouldBe('Oops! CPF inválido')
+    })
+
+    it('Incorrect email', function(){        
+        signup.go()
+        signup.fillForm(this.delivery.email_inv)
+        signup.submit()
+        signup.alertMessageShouldBe('Oops! Email com formato inválido.')
     })
 })
