@@ -12,7 +12,7 @@ class SingupPage{
     }
 
     fillForm(delivery){
-        cy.get('input[name="name"]').type(delivery.name)
+        cy.get('input[name="fullName"]').type(delivery.name)
         cy.get('input[name="cpf"]').type(delivery.cpf)
         cy.get('input[name="email"]').type(delivery.email)
         cy.get('input[name="whatsapp"]').type(delivery.whatsapp)
@@ -46,4 +46,4 @@ class SingupPage{
     }
 }
 
-export default SingupPage;
+export default new SingupPage; //Intaciando singup
