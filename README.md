@@ -40,5 +40,13 @@ Abrir a interface gráfica do Cypress
 
  Dica: Deletar as pastas padrão dentro do cypress -> Criar a pasta integration e criar o arquivo de teste. Exemplo: home.spec.js
 
+ Trabalhar com massa de dados dinâmicos:
+
+ Instalar as bibliotecas:
+
+ npm install faker@5.5.3 --save-dev
+
+ npm i gerador-validador-cpf (https://www.npmjs.com/package/gerador-validador-cpf)
+
 
 
