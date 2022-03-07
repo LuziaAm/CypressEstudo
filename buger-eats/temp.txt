@@ -1,3 +1,1 @@
-7ed603a3-cb4b-42e9-869d-e66c88d06441
-
 npx cypress run --record --key 7ed603a3-cb4b-42e9-869d-e66c88d06441
