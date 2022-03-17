@@ -29,6 +29,8 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           install-command: yarn install
+          build: yarn build
+          start: yarn start:ci
           wait-on: ${{ secrets.BASE_URL }}
           wait-on-timeout: 120
           browser: chrome
