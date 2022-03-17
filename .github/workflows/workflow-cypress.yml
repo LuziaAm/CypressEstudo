@@ -1,6 +1,10 @@
 name: Cypress Regression Tests
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 9,18 * * 1,2,3,4,5'
 
 jobs:
 
@@ -12,6 +16,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Setup Node.js enviroment
+        uses: actions/setup-node@v2.2.0
+        with:
+          node-version: ${{matrix.node-version}}
+        
+      - name: Install dependencies
+        run: npm install
       
       - name: 'UI Tests - Chrome'
         uses: cypress-io/github-action@v2
